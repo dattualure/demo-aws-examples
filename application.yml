@@ -1,0 +1,16 @@
+cloud:
+  aws:
+    region:
+      static: us-east-1
+      auto: false
+    credentials:
+      access-key: AKIA3I36RSAXRIB6HDGJ
+      secret-key: 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
+    end-point:
+      uri: https://sqs.us-east-1.amazonaws.com/774970118191/dattajavatechie-queue   
+  logging:
+   level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
