@@ -32,7 +32,7 @@ public class AwsSQSConfig {
 	public AmazonSQSAsync amazonSQSAsync() {
 		// TODO Auto-generated method stub
 		
-		return AmazonSQSAsyncClientBuilder.standard().withRegion(Regions.US_EAST_1)
+		return AmazonSQSAsyncClientBuilder.standard().withRegion(region)
 				.withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, awsSecretKe))).build();
 	}
 

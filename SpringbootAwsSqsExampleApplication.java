@@ -25,7 +25,7 @@ public class SpringbootAwsSqsExampleApplication {
 	@Autowired
 	private QueueMessagingTemplate qmt;
 	
-	@Value("${cloud.aws.endpoint.uri}")
+	@Value("${cloud.end-point.uri}")
 	private String endPoint;
 	
 	@GetMapping("/")
@@ -34,6 +34,7 @@ public class SpringbootAwsSqsExampleApplication {
 	}
 	@GetMapping("/send/{message}")
 	public void sendMsgQueue(@PathVariable String message) {
+		logger.info(message);
 		qmt.send(endPoint, MessageBuilder.withPayload(message).build());
 		
 	}
